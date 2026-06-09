@@ -12,31 +12,31 @@ pipeline {
 
         stage('Validate Dataset') {
             steps {
-                sh 'python scripts/validate_dataset.py'
+                sh 'python validate_dataset.py'
             }
         }
 
         stage('Topic Categorization') {
             steps {
-                sh 'python scripts/topic_categorization.py'
+                sh 'python topic_categorization.py'
             }
         }
 
         stage('Sentiment Analysis') {
             steps {
-                sh 'python scripts/sentiment_analysis.py'
+                sh 'python sentiment_analysis.py'
             }
         }
 
         stage('Bonus Insights') {
             steps {
-                sh 'python scripts/bonus_insights.py'
+                sh 'python bonus_insights.py'
             }
         }
 
         stage('Generate Report') {
             steps {
-                sh 'python scripts/generate_report.py'
+                sh 'python generate_report.py'
             }
         }
     }
